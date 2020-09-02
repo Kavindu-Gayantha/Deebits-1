@@ -16,6 +16,16 @@ public class Books {
     @Column(name = "book_category")
     private String category;
 
+    public Books(String book_name, String book_category) {
+        super();
+        this.name=book_name;
+        this.category=book_category;
+
+    }
+    public Books(){
+
+    }
+
     //getters setters to get and set id,name,category
     public int getId() {
         return id;
