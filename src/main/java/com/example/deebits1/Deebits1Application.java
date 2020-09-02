@@ -14,13 +14,9 @@ public class Deebits1Application implements CommandLineRunner {
 		SpringApplication.run(Deebits1Application.class, args);
 	}
 
-	@Autowired
-	private BookRepository bookRepository;
+
 	@Override
 	public void run(String... args) throws Exception {
-		this.bookRepository.save(new Books("book1","children_category"));
-		this.bookRepository.save(new Books("book2","novels"));
-		this.bookRepository.save(new Books("book3","short stories"));
 
 	}
 }

@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Books {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column(name = "book_name")
     private String name;
@@ -27,11 +27,11 @@ public class Books {
     }
 
     //getters setters to get and set id,name,category
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
