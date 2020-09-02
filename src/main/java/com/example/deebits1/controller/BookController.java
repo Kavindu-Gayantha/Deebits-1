@@ -27,31 +27,31 @@ public class BookController {
     private BookServices bookServices;
 
     //get -end point to get all the books
-    @GetMapping("/books")
+    @GetMapping("books")
     public ResponseEntity<List<Books>> getAllBooks(){
         return ResponseEntity.ok().body(bookServices.getAllBooks());
     }
-    @GetMapping("/books/{id}")
+    @GetMapping("getBook/{id}")
     public ResponseEntity<Object> getBookById(@PathVariable long id){
         return ResponseEntity.ok().body(bookServices.getBookById(id));
     }
 
     //post -end point
-    @PostMapping("/addBook")
+    @PostMapping("addBook")
     public ResponseEntity<Books> addBook(@RequestBody Books books){
 //        this.bookServices.createBook(books);
           return ResponseEntity.ok().body(this.bookServices.createBook(books));
 
     }
     //update -end point
-    @PutMapping("/updateBook/{id}")
+    @PutMapping("updateBook/{id}")
     public ResponseEntity<Books> updateBook(@PathVariable long id, @RequestBody Books books){
         books.setId(id);
         return ResponseEntity.ok().body(this.bookServices.updateBook(books));
 
     }
     //delete -end point
-    @DeleteMapping("/deleteBook/{id}")
+    @DeleteMapping("deleteBook/{id}")
     public HttpStatus deleteBook(@PathVariable long id){
         this.bookServices.deleteBook(id);
 
