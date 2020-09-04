@@ -1,4 +1,4 @@
-# deebtis
+# springboot API with H2 database 
 ### managing books
 
 # End points
