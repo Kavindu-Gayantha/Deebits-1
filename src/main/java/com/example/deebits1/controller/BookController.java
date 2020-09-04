@@ -12,6 +12,7 @@ import java.util.List;
 // end points are located here
 
 @RestController
+@CrossOrigin(origins ="*")
 @RequestMapping("/api")
 public class BookController {
 
