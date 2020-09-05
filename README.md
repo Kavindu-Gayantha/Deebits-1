@@ -8,3 +8,4 @@
 * get a book by id->    /book/{id}
 * create a book->       /addBook
 * update a book->       /updateBook/{id}
+* delete a book->       /deleteBook/{id}
